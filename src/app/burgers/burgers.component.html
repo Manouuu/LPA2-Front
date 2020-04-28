@@ -1,0 +1,7 @@
+<div *ngIf="burgers">
+    <div *ngFor="let burger of burgers">
+        <p>{{ burger.name }}</p>
+        <p>{{ burger.price }}</p>
+        <img src="{{ burger.image }}" width="450px">
+    </div>
+</div>
