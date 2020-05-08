@@ -1,7 +1,14 @@
-<div *ngIf="burgers">
-    <div *ngFor="let burger of burgers">
-        <p>{{ burger.name }}</p>
-        <p>{{ burger.price }}</p>
-        <img src="{{ burger.image }}" width="450px">
-    </div>
-</div>
+<mat-card class="my-card" *ngFor="let burger of burgers">
+    <mat-card-header>
+        <mat-card-title>
+            {{ burger.name }}
+        </mat-card-title>
+    </mat-card-header>
+    <img mat-card-image src="{{ burger.image }}">
+    <mat-card-content>
+        {{ burger.price }}$
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-button routerLink="burger/{{ burger.id }}">Détails</button>
+    </mat-card-actions>
+</mat-card>
